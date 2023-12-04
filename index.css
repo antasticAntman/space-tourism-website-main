@@ -1,0 +1,34 @@
+/* -------------------- */
+/*Reset*/
+/* -------------------- */
+
+/* credit: https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box Sizing */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset Margins */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin:0;
+}
+
+/* set up the body */
+
+body {
+    line-height:1.5;
+    min-height:100vh;
+}
