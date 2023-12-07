@@ -35,7 +35,35 @@ body {
         This Insures that the page that don't scroll are atleast the full vp height*/
 }
 
+/* Makes image easier to work with */
+
 img,
 picture {
+    max-width:100%;
+    /* ^ This insures that the image should start at max size and shrink as the vp shrinks*/
     display: block;
 }
+
+/* Make form elements easier to work with */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* ^ This makes sure that the form elements inherits the parent font,
+     bc by default, those elements do not inherit any parent attributes*/
+
+     /* Removes animations for people who've turned them off */
+     @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+     }
