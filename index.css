@@ -30,5 +30,12 @@ picture {
 
 body {
     line-height:1.5;
-    min-height:100vh;
+    min-height:100vh; 
+    /* ^ Prevent weird incomplete small pages. 
+        This Insures that the page that don't scroll are atleast the full vp height*/
+}
+
+img,
+picture {
+    display: block;
 }
