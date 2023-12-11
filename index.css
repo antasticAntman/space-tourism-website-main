@@ -69,6 +69,16 @@ picture {
     margin:0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
 /* set up the body */
 
 body {
@@ -76,8 +86,8 @@ body {
     min-height:100vh; 
     /* ^ Prevent weird incomplete small pages. 
         This Insures that the page that don't scroll are atleast the full vp height*/
-    background-color: var(--clr-dark);
-    color:var(--clr-white);
+    background-color: hsl(var(--clr-dark));
+    color:hsl(var(--clr-white));
     font-family: var(--ff-sans-norm);
     font-size: var(--fs-400) ;
 }
