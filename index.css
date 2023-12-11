@@ -25,13 +25,20 @@
      the smaller the letters, 
      so bolder you get, 
      bigger the number 
+
+     I used rem for accessibility reasons. 
+     If I were to use pixels, 
+     I could potentially alter user settings put into place like if the user has a bigger font size for there vison. 
+     We want to respect they're changes so use rem for font size!
     */
 
     /* font-families */
 
     --ff-serif: "Bellefair", serif;
     --ff-sans-cond: "Barlow Condensed", sans-serif;
-    --ff-sans-norm: "Barlow", sans-serif
+    --ff-sans-norm: "Barlow", sans-serif;
+
+
 }
 
 /* -------------------- */
@@ -163,3 +170,15 @@ select {
 .ff-serif { font-family:var(--ff-serif);}
 .ff-sans-cond{font-family:var(--ff-sans-cond);}
 .ff-sans-norm{font-family:var(--ff-sans-norm);}
+
+.letter-spacing-1 {
+    letter-spacing: 4.75px;
+}
+.letter-spacing-2 {
+    letter-spacing: 2.7px;
+}
+.letter-spacing-3 {
+    letter-spacing: 2.35px;
+}
+
+.uppercase{text-transform: uppercase;}
