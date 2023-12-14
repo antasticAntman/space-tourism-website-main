@@ -150,7 +150,8 @@ select {
 
     //:is = Take the highest specificty selector and apply it to the entire rule
     */
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
+    margin-top: var(--flow-space, 1rem);
     outline:1px solid red
 }
 
