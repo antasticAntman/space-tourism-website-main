@@ -139,6 +139,21 @@ select {
     gap: var(--gap, 1rem);
 }
 
+.flow > *:where(:not(:first-child)){  
+    /* ^^ Looking for adjecient siblings that come before it 
+    selector examples: 
+    * + * (No Specificity)||
+    (Has Specificity) *:not(:first-child) ||
+    (No Specificity) *:where(:not(:first-child))
+    
+    //:where = Doesn't add specificity anywhere, everything gets none 
+
+    //:is = Take the highest specificty selector and apply it to the entire rule
+    */
+    margin-top: 1rem;
+    outline:1px solid red
+}
+
 .container {
     padding-inline: 2em;
     margin-inline:auto;
@@ -211,4 +226,17 @@ select {
 .fs-700,
 .fs-600{
     line-height: 1.1;
+}
+
+.numbered-title {
+    font-family: var(--ff-sans-cond);
+    font-size: var(--fs-500);
+    text-transform: uppercase;
+    letter-spacing: 4.72px;
+}
+
+.numbered-title > span {
+    color:hsl(var(--clr-light)/.25);
+    margin-right: .5em;
+    font-weight: 700;
 }
