@@ -275,3 +275,25 @@ select {
     opacity: 1;
     transform:scale(1.5);
 }
+
+.primary-navigation{
+    --gap:6rem;
+    background-color: hsl(var(--clr-white) /.15);
+    margin:0;
+    padding:0;
+    list-style: none;
+    justify-content: center;
+}
+
+.primary-navigation a{
+    text-decoration: none;
+}
+
+.primary-navigation a > span{
+    font-weight: 700;
+    margin-right:.5em;
+}
+
+.underline-indicator > * {
+
+}
