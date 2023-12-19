@@ -278,6 +278,7 @@ select {
 
 .primary-navigation{
     --gap:6rem;
+    --underline-gap: 2rem;
     background-color: hsl(var(--clr-white) /.15);
     margin:0;
     padding:0;
@@ -295,5 +296,15 @@ select {
 }
 
 .underline-indicator > * {
+    padding: var(--underline-gap, 1rem);
+    border-bottom: .2rem solid hsl(var(--clr-white) /0)
+}
 
+.underline-indicator >*:hover,
+.underline-indicator >*:focus{
+    border-color:hsl(var(--clr-white)/.25)
+}
+
+.underline-indicator > .active{
+    border-color: hsl(var(--clr-white) );
 }
