@@ -304,11 +304,14 @@ select {
 
 .underline-indicator >*:hover,
 .underline-indicator >*:focus{
-    border-color:hsl(var(--clr-white)/.25)
+    border-color:hsl(var(--clr-white)/.5)
 }
 
-.underline-indicator > .active{
-    border-color: hsl(var(--clr-white) );
+.underline-indicator > .active,
+.underline-indicator > [aria-selected="true"]
+{
+    color:hsl(var(--clr-white) / 1);
+    border-color: hsl(var(--clr-white) / 1);
 }
 
 .tab-list{
