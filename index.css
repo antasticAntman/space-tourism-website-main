@@ -319,3 +319,28 @@ select {
 .tab-list{
  --gap:3rem;
 }
+
+.dot-indicators{
+    margin:3rem;
+    border:0;
+}
+
+.dot-indicators > *{
+    /* border-radius: 50%; */
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: hsl(var(--clr-light)/.25);
+    padding:.5rem;
+}
+
+.dot-indicators > *:hover,
+.dot-indicators > *:focus-visible
+{
+    background-color: hsl(var(--clr-white) /.60);
+}
+
+.dot-indicators > .active,
+.dot-indicators > [aria-selected='true']
+{
+    background-color:hsl(var(--clr-white) )
+}
