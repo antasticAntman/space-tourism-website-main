@@ -163,7 +163,8 @@ select {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 2em repeat(2, minmax(0,40rem)) 2em;
+    column-gap: var(--column-gap, 2rem);
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0,30rem)) minmax(2rem, 1fr);
 }
 
 .grid-container > *:first-child {
