@@ -166,12 +166,12 @@ select {
 
 .grid-container {
     display: grid;
-
+    border: 5px solid limegreen
 }
 
 @media (min-width: 45rem) {
     .grid-container {
-        column-gap: var(--column-gap, 2rem);
+        column-gap: var(--container-gap, 2rem);
         grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0,30rem)) minmax(2rem, 1fr);
     }
 
