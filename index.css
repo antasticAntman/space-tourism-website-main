@@ -90,6 +90,9 @@ body {
     color:hsl(var(--clr-white));
     font-family: var(--ff-sans-norm);
     font-size: var(--fs-400) ;
+
+    display:grid;
+    grid-template-rows: min-content 1fr;
 }
 
 /* Makes image easier to work with */
