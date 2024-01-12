@@ -194,6 +194,11 @@ select {
     padding-inline:1rem;
 }
 
+.grid-container--home {
+    padding-bottom: max(6rem, 12rem);
+    align-items: end;
+}
+
 .grid-container * {
     max-width: 50ch;
 }
