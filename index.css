@@ -466,14 +466,14 @@ body {
     background-image: url(./starter-code/assets/home/background-home-mobile.jpg);
 }
 
-@media (min-width: 35rem){
+@media (min-width:35rem){
     .home {
         background-position: center center;
         background-image: url(./starter-code/assets/home/background-home-tablet.jpg) ;
     }
 }
 
-@media (min-width: 45rem){
+@media (min-width:45rem){
     .home {
         background-image: url(./starter-code/assets/home/background-home-desktop.jpg) ;
     }
