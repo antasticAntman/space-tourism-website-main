@@ -339,13 +339,17 @@ select {
 }
 
 .primary-navigation{
-    --gap:6rem;
     --underline-gap: 2rem;
     background-color: hsl(var(--clr-white) /.15);
     margin:0;
-    padding:0;
+    padding:3rem 2rem;
     list-style: none;
-    justify-content: center;
+    border:1px solid cyan;
+    flex-direction: column;
+    position: fixed;
+    background:black;
+    inset: 0 0 0 18%;
+    z-index: 1000;
 }
 
 .primary-navigation a{
