@@ -356,14 +356,19 @@ select {
     margin-right:.5em;
 }
 
-@media (max-width: 30rem){
+@media (max-width: 55rem){
     .primary-navigation {
+        --underline-gap:.5rem;
         flex-direction: column;
         position: fixed;
         background:black;
         inset: 0 0 0 30%;
         z-index: 1000;
         padding:min(20rem, 15vh) 2rem;
+    }
+
+    .primary-navigation.underline-indicator > * {
+        border:0;
     }
 }
 
