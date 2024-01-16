@@ -340,7 +340,9 @@ select {
 
 .primary-navigation{
     --underline-gap: 2rem;
-    background-color: hsl(var(--clr-white) /.15);
+    background-color: hsl(var(--clr-white) /.002);
+    backdrop-filter: blur(1.5rem);
+    -webkit-backdrop-filter: blur(1.5rem);
     margin:0;
     padding:0;
     list-style: none;
@@ -361,8 +363,8 @@ select {
         --underline-gap:.5rem;
         flex-direction: column;
         position: fixed;
-        background:black;
-        inset: 0 0 0 30%;
+        /* background:black; */
+        inset: 0 0 0 33%;
         z-index: 1000;
         padding:min(20rem, 15vh) 2rem;
     }
