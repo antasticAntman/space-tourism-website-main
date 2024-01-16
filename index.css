@@ -111,6 +111,8 @@ body {
 
     display:grid;
     grid-template-rows: min-content 1fr;
+
+    overflow-x: hidden;
 }
 
 /* Makes image easier to work with */
@@ -347,6 +349,10 @@ select {
     border:1px solid cyan;
 }
 
+.mobile-nav-toggle {
+    display:none
+}
+
 @supports(backdrop-filter: blur(1.5rem)){
     .primary-navigation{
         background-color: hsl(var(--clr-white) /.002);
@@ -369,10 +375,24 @@ select {
         --underline-gap:.5rem;
         flex-direction: column;
         position: fixed;
-        /* background:black; */
         inset: 0 0 0 33%;
         z-index: 1000;
         padding:min(20rem, 15vh) 2rem;
+        transform: translateX(100%);
+    }
+
+    .mobile-nav-toggle {
+        display:block;
+        position:absolute;
+        z-index: 2000;
+        right:1rem;
+        top:2rem;
+        background: transparent;
+        border:0;
+        background-image: url(./starter-code/assets/shared/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        width: 1.5rem;
+        aspect-ratio: 1;
     }
 
     .primary-navigation.underline-indicator > * {
