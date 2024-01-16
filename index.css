@@ -340,13 +340,19 @@ select {
 
 .primary-navigation{
     --underline-gap: 2rem;
-    background-color: hsl(var(--clr-white) /.002);
-    backdrop-filter: blur(1.5rem);
-    -webkit-backdrop-filter: blur(1.5rem);
+    background-color: hsl(var(--clr-dark) /.95);
     margin:0;
     padding:0;
     list-style: none;
     border:1px solid cyan;
+}
+
+@supports(backdrop-filter: blur(1.5rem)){
+    .primary-navigation{
+        background-color: hsl(var(--clr-white) /.002);
+        backdrop-filter: blur(1.5rem);
+        -webkit-backdrop-filter: blur(1.5rem);
+    }
 }
 
 .primary-navigation a{
