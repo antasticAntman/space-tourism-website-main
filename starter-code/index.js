@@ -12,11 +12,14 @@ navToggle.addEventListener('click', () =>  {
 
     if( visibiltiy === 'false'){
         nav.setAttribute('data-visible', 'true')
+        navToggle.setAttribute('aria-expanded', 'true')
     }
     // if nav is open, close it
 
     if(visibiltiy === 'true'){
         nav.setAttribute('data-visible', 'false')
+        navToggle.setAttribute('aria-expanded', 'false')
     }
-    console.log(visibiltiy)
+    console.log('visibilty',visibiltiy)
+    console.log(navToggle.getAttribute("aria-expanded"))
 })

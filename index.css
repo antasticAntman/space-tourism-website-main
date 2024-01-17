@@ -379,12 +379,13 @@ select {
         z-index: 1000;
         padding:min(20rem, 15vh) 2rem;
         transform: translateX(100%);
+        transition: transform 500ms ease-in-out;
     }
 
 .primary-navigation[data-visible='true'] {
         transform: translateX(0%);
      }
-.mobile-nav-toggle[data-visible='true'] {
+.mobile-nav-toggle[aria-expanded='true'] {
     background-image: url(./starter-code/assets/shared/icon-close.svg);
     }
 
