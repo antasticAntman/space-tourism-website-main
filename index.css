@@ -381,6 +381,13 @@ select {
         transform: translateX(100%);
     }
 
+.primary-navigation[data-visible='true'] {
+        transform: translateX(0%);
+     }
+.mobile-nav-toggle[data-visible='true'] {
+    background-image: url(./starter-code/assets/shared/icon-close.svg);
+    }
+
     .mobile-nav-toggle {
         display:block;
         position:absolute;
