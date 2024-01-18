@@ -389,6 +389,10 @@ select {
     background-image: url(./starter-code/assets/shared/icon-close.svg);
     }
 
+.mobile-nav-toggle:focus-visible{
+    outline:5px solid white;
+    outline-offset: 5px;
+}
     .mobile-nav-toggle {
         display:block;
         position:absolute;
@@ -399,6 +403,7 @@ select {
         border:0;
         background-image: url(./starter-code/assets/shared/icon-hamburger.svg);
         background-repeat: no-repeat;
+        background-position: center;
         width: 1.5rem;
         aspect-ratio: 1;
     }
