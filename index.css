@@ -440,6 +440,12 @@ select {
     }
 }
 
+@media (min-width :45em) {
+    .primary-navigation {
+        margin-block:2rem;
+    }
+}
+
 .underline-indicator > * {
     padding: var(--underline-gap, 1rem) 0;
     border:0;
