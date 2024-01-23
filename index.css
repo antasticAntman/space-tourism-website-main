@@ -236,6 +236,22 @@ select {
     border:0;
 }
 
+.skip-to-content {
+    position: absolute;
+    z-index: 3000;
+    padding:.5em 1em;
+    margin-inline: auto;
+    background-color: hsl(var(--clr-white) );
+    color:hsl(var(--clr-dark) );
+    transform: translateY(-105%);
+    transition: transform 250ms ease-in-out;
+}
+
+.skip-to-content:focus {
+    transform: translateY(0);
+}
+
+
 /* colors */
 
 .bg-dark { background-color:hsl(var(--clr-dark) );}
