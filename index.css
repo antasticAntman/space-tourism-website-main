@@ -14,7 +14,7 @@
     --fs-800:3.5rem ;
     --fs-700:1.5rem ;
     --fs-600:1rem ;
-    --fs-500:1.75rem ;
+    --fs-500:1rem ;
     --fs-400:0.9375rem;
     --fs-300:1rem ;
     --fs-200:0.875rem ;
@@ -46,6 +46,7 @@
         --fs-800: 5rem;
         --fs-700:2.5rem;
         --fs-600:1.5rem;
+        --fs-500:1.25rem ;
         --fs-400:1rem
     }
 }
@@ -55,6 +56,7 @@
         --fs-800:6.25rem ;
         --fs-700:3.5rem ;
         --fs-600:2rem ;
+        --fs-500:1.75rem ;
         --fs-400:1.125rem;
     }
 }
@@ -186,41 +188,6 @@ select {
     padding-inline: 2em;
     margin-inline:auto;
     max-width: 80rem;
-}
-
-.grid-container {
-    text-align: center;
-    display: grid;
-    border: 5px solid limegreen;
-    place-items:center;
-    padding-inline:1rem;
-}
-
-.grid-container * {
-    max-width: 50ch;
-}
-
-@media (min-width: 45em) {
-    .grid-container {
-        text-align: left;
-        column-gap: var(--container-gap, 2rem);
-        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0,30rem)) minmax(1rem, 1fr);
-    }
-
-    .grid-container > *:first-child {
-        grid-column:2;
-        outline:1px solid red;
-    }
-    
-    .grid-container > *:last-child {
-        grid-column:3;
-        outline:1px solid yellow;
-    }
-
-    .grid-container--home {
-        padding-bottom: max(6rem, 10rem);
-        align-items: end;
-    }
 }
 
 
@@ -601,3 +568,44 @@ body {
     }
 }
 
+
+/* ------------------------ */
+/* Layout */
+/* ------------------------ */
+
+.grid-container {
+    text-align: center;
+    display: grid;
+    border: 5px solid limegreen;
+    place-items:center;
+    padding-inline:1rem;
+}
+
+.grid-container * {
+    max-width: 50ch;
+}
+
+/* Destination layout */
+
+@media (min-width: 45em) {
+    .grid-container {
+        text-align: left;
+        column-gap: var(--container-gap, 2rem);
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0,30rem)) minmax(1rem, 1fr);
+    }
+
+    .grid-container > *:first-child {
+        grid-column:2;
+        outline:1px solid red;
+    }
+    
+    .grid-container > *:last-child {
+        grid-column:3;
+        outline:1px solid yellow;
+    }
+
+    .grid-container--home {
+        padding-bottom: max(6rem, 10rem);
+        align-items: end;
+    }
+}

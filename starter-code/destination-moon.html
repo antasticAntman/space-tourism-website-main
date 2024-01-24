@@ -36,42 +36,38 @@
     </nav>
   </header>
 
-  <main>
-    <p class="uppercase ff-serif text-white letter-spacing-2"><span class="text-accent">01</span> Pick your destination</p>
-    <img src='./assets/destination/image-moon.png' alt="moon"/>
-    <nav>
-      <ul class="underline-indicator flex">
-      <li><a>Moon</a>
-      <li><a>Mars</a>
-      <li><a>Europa</a>
-      <li><a>Titan</a>
-      </ul>
-    </nav>
+  <main id="main" class="grid-container grid-container--destination">
+    <h1 class="numbered-title"><span aria-hidden="true">01</span> Pick your destination</h1>
+    
+    <img src='./assets/destination/image-moon.png' alt="the moon"/>
+    
+    <div class="tab-list underline-indicator flex">
+      <button aria-selected="true" class="uppercase letter-spacing-2 bg-dark text-accent ff-sans-cond active">Moon</button>
+      <button aria-selected="false" class="uppercase letter-spacing-2 bg-dark text-accent ff-sans-cond">Mars</button>
+      <button aria-selected="false" class="uppercase letter-spacing-2 bg-dark text-accent ff-sans-cond">Europa</button>
+      <button aria-selected="false" class="uppercase letter-spacing-2 bg-dark text-accent ff-sans-cond">Titan</button>
+    </div>
 
-    <div class="grid">
-      <h2 class="fs-900 uppercase">Moon</h2>
+    <article class="grid">
+      <h2 class="fs-800 uppercase ff-serif">Moon</h2>
 
-      <p class="fs-300 text-accent">See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+      <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
       regain perspective and come back refreshed. While you’re there, take in some history 
       by visiting the Luna 2 and Apollo 11 landing sites.</p>
       
-      <div class="flex uppercase">
+      <div class="flex">
         <div>
-          <p class="fs-500">
-            <span class="text-accent fs-200">Avg. distance</span>
-            384,400 km
-          </p>
+          <h3 class="uppercase text-accent fs-200">Avg. distance</h3>
+          <p class=" uppercase fs-500 ff-serif">384,400 km</p>
         </div>
 
         <div>
-          <p class="fs-500">
-          <span class="fs-200 text-accent">Est. travel time</span>
-            3 days
-          </p>
+          <h3 class="uppercase text-accent fs-200">Est. travel time</h3>
+          <p class=' uppercase fs-500 ff-serif'>3 days</p>
         </div>
-
       </div>
-    </div>
+
+    </article>
   </main>
 </body>
 </html>
