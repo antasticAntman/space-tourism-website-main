@@ -17,9 +17,10 @@
 
   <title>Frontend Mentor | Space tourism website</title>
   <script src="./index.js" defer></script>
-</head>
-<body>
 
+</head>
+<body class="destination">
+  <a class="skip-to-content" href="#main">Skip link to main</a>
   <header class="primary-header flex">
     <div>
       <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo"/>
@@ -36,8 +37,8 @@
   </header>
 
   <main>
-    <p><span>01</span> Pick your destination</p>
-
+    <p class="uppercase ff-serif text-white letter-spacing-2"><span class="text-accent">01</span> Pick your destination</p>
+    <img src='./assets/destination/image-moon.png' alt="moon"/>
     <nav>
       <ul class="underline-indicator flex">
       <li><a>Moon</a>
@@ -46,17 +47,31 @@
       <li><a>Titan</a>
       </ul>
     </nav>
-    Moon
 
-    See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
-    regain perspective and come back refreshed. While you’re there, take in some history 
-    by visiting the Luna 2 and Apollo 11 landing sites.
+    <div class="grid">
+      <h2 class="fs-900 uppercase">Moon</h2>
 
-    Avg. distance
-    384,400 km
+      <p class="fs-300 text-accent">See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+      regain perspective and come back refreshed. While you’re there, take in some history 
+      by visiting the Luna 2 and Apollo 11 landing sites.</p>
+      
+      <div class="flex uppercase">
+        <div>
+          <p class="fs-500">
+            <span class="text-accent fs-200">Avg. distance</span>
+            384,400 km
+          </p>
+        </div>
 
-    Est. travel time
-    3 days
+        <div>
+          <p class="fs-500">
+          <span class="fs-200 text-accent">Est. travel time</span>
+            3 days
+          </p>
+        </div>
+
+      </div>
+    </div>
   </main>
 </body>
 </html>
