@@ -471,12 +471,14 @@ select {
  --gap:2rem;
 }
 
-.dot-indicators{
+/* .dot-indicators{
     margin:3rem;
     border:0;
-}
+} */
 
 .dot-indicators > *{
+    cursor:pointer;
+    border:0;
     border-radius: 50%;
     aspect-ratio: 1;
     border-radius: 50%;
@@ -624,6 +626,17 @@ body {
 
 .destination-meta p {
     font-size: 1.75rem;
+}
+
+/* Destination layout */
+
+.grid-container--crew {
+    --flow-space:1.5rem;
+    grid-template-areas: 
+        "title"
+        "image"
+        "tabs"
+        "content";
 }
 
 @media (min-width:35em) {
