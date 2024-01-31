@@ -667,6 +667,7 @@ body {
     /* Crew section */
 
     .grid-container--crew {
+        padding:0;
         grid-template-areas: 
             "title"
             "info"
@@ -698,6 +699,8 @@ body {
         align-items: end;
     }
 
+    /* Destination Home Page! */
+
     .grid-container--destination {
         justify-items: start;
         align-content: start;
@@ -708,12 +711,32 @@ body {
         ;
     }
 
-    .grid-container--destination > img {
+    .grid-container--destination > img,
+    .grid-container--crew > img
+    {
        max-width:90%;
     }
 
     .destination-meta {
         justify-content: start;
         --gap: min(6vw, 4.5rem)
+    }
+
+    /* Crew Home Page! */
+
+    .grid-container--crew {
+        column-gap: 6rem;
+        grid-template-areas: 
+            ". title title ."
+            ". info image ."
+            ". tabs image .";
+    }
+
+    .grid-container--crew > .dot-indicators {
+        justify-self: start;
+    }
+
+    .grid-container--crew > img {
+        align-self: end;
     }
 }
