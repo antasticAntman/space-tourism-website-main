@@ -566,6 +566,43 @@ body {
     }
 }
 
+/* Crew */
+
+.crew {
+    background-image: url(./starter-code/assets/crew/background-crew-mobile.jpg);
+}
+
+@media (min-width:35rem){
+    .crew {
+        background-position: center center;
+        background-image: url(./starter-code/assets/crew/background-crew-tablet.jpg) ;
+    }
+}
+
+@media (min-width:45rem){
+    .crew {
+        background-image: url(./starter-code/assets/crew/background-crew-desktop.jpg) ;
+    }
+}
+
+/* destination */
+
+.destination {
+    background-image: url(./starter-code/assets/destination/background-destination-mobile.jpg);
+}
+
+@media (min-width:35rem){
+    .destination {
+        background-position: center center;
+        background-image: url(./starter-code/assets/destination/background-destination-tablet.jpg) ;
+    }
+}
+
+@media (min-width:45rem){
+    .destination {
+        background-image: url(./starter-code/assets/destination/background-destination-desktop.jpg) ;
+    }
+}
 
 /* ------------------------ */
 /* Layout */
