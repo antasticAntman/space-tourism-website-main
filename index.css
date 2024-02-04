@@ -451,6 +451,7 @@ select {
     border:0;
     border-bottom: .2rem solid hsl(var(--clr-white) /0);
     cursor: pointer;
+    background-color: transparent;
 }
 
 .underline-indicator >*:hover,
@@ -468,7 +469,7 @@ select {
 }
 
 .tab-list{
- --gap:2rem;
+ --gap:1.5rem;
 }
 
 
@@ -570,6 +571,14 @@ body {
 
 .crew {
     background-image: url(./starter-code/assets/crew/background-crew-mobile.jpg);
+}
+
+.crew-details h2 {
+    color: hsl(var(--clr-white)/.5 )
+}
+
+.flow--space-small {
+    --flow-space:0.5rem;
 }
 
 @media (min-width:35rem){
