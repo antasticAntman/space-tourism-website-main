@@ -17,30 +17,51 @@
   <title>Frontend Mentor | Space tourism website</title>
   <script src="./index.js" defer></script>
 </head>
-<body>
+<body class="destination">
+  <a class="skip-to-content" href="#main">Skip link to main</a>
+  <header class="primary-header flex">
+    <div>
+      <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo"/>
+    </div>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
+    <nav>
+      <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicator flex">
+          <li class="active"><a class="uppercase ff-sans-cond text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a>
+          <li><a class="uppercase ff-sans-cond text-white letter-spacing-2" href="destination.html"><span aria-hidden="true">01</span>Destination</a>
+          <li><a class="uppercase ff-sans-cond text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span>Crew</a>
+          <li><a class="uppercase ff-sans-cond text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">03</span>Technology</a>
+      </ul>
+    </nav>
+  </header>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+  <main id="main" class="grid-container grid-container--destination flow">
+    <h1 class="numbered-title"><span aria-hidden="true">01</span> Pick your destination</h1>
 
-  01 Pick your destination
+    <picture>
+      <source srcset="./assets/destination/image-mars.webp" type="image/webp">
+      <img src='./assets/destination/image-mars.png' alt="Mars"/>
+    </picture>
 
-  Moon
-  Mars
-  Europa
-  Titan
+    <div class="tab-list underline-indicator flex">
+      <button aria-selected="false" class="uppercase letter-spacing-2 text-accent ff-sans-cond">Moon</button>
+      <button aria-selected="true" class="uppercase letter-spacing-2 text-accent ff-sans-cond active">Mars</button>
+      <button aria-selected="false" class="uppercase letter-spacing-2 text-accent ff-sans-cond">Europa</button>
+      <button aria-selected="false" class="uppercase letter-spacing-2 text-accent ff-sans-cond">Titan</button>
+    </div>
+    
+    <article class="destination-info flow">
+      <h2 class="uppercase letter-spacing-2 ff-serif">Mars</h2>
 
-  Mars
+      Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
+      the tallest planetary mountain in our solar system. It’s two and a half times 
+      the size of Everest!
 
-  Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
-  the tallest planetary mountain in our solar system. It’s two and a half times 
-  the size of Everest!
+      Avg. distance
+      225 mil. km
 
-  Avg. distance
-  225 mil. km
-
-  Est. travel time
-  9 months
+      Est. travel time
+      9 months
+    </article>
+  </main>
 </body>
 </html>
