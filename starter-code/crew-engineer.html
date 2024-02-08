@@ -14,7 +14,9 @@
 
   <!-- CSS Style Sheet -->
   <link rel="stylesheet" href="../index.css">
+
   <title>Frontend Mentor | Space tourism website</title>
+  
   <script src="./index.js" defer></script>
 </head>
 <body class="crew">
@@ -35,24 +37,24 @@
     </nav>
   </header>
 
-  <main id="id" class="grid-container grid-container--crew flow">
+  <main id="main" class="grid-container grid-container--crew flow">
 
-    <h1 class="numbered-title"><span aria-hidden="true">02</span> Meet your crew</h1>
+    <h1 class="numbered-title grid-title"><span aria-hidden="true">02</span> Meet your crew</h1>
     
     <div class="dot-indicators flex">
-      <button aria-selected="true" class="active"><span class="sr-only">The Commander</span></button>
+      <button aria-selected="false"><span class="sr-only">The Commander</span></button>
       <button aria-selected="false"><span class="sr-only">The Mission Specialist</span></button>
       <button aria-selected="false"><span class="sr-only">The Pilot</span></button>
-      <button aria-selected="false"><span class="sr-only">The Engineer</span></button>
+      <button aria-selected="True" class="active"><span class="sr-only">The Engineer</span></button>
     </div>
 
     <article class="crew-details flow">
-      <header>
-        <h2>Flight Engineer</h2>
-        <p>Anousheh Ansari</p>
+      <header class="flow flow--space-small">
+        <h2 class="uppercase fs-600 ff-serif">Flight Engineer</h2>
+        <p class="uppercase fs-700 ff-serif">Anousheh Ansari</p>
       </header>
 
-      <p>Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. 
+      <p class="text-accent">Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. 
       Ansari was the fourth self-funded space tourist, the first self-funded woman to 
       fly to the ISS, and the first Iranian in space.</p> 
     </article>
@@ -61,6 +63,7 @@
       <source srcset="./assets/crew/image-anousheh-ansari.webp" type="image/webp">
       <img src="./assets/crew/image-anousheh-ansari.png" alt="crew engineer">
     </picture>
+
   </main>
 </body>
 </html>
