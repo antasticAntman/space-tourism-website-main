@@ -38,11 +38,25 @@
 
   <main id="main" class="grid-container grid-container--destination flow">
     <h1 class="numbered-title"><span aria-hidden="true">01</span> Pick your destination</h1>
-    
-    <picture>
-      <source srcset="./assets/destination/image-moon.webp" type="image/webp">
-      <img src='./assets/destination/image-moon.png' alt="the moon"/>
-    </picture>
+    <!-- Moon -->
+    <div class="destination_img">
+      <img src='assets/destination/image-moon.png' alt="the moon"/>
+    </div>
+    <!-- Mars -->
+    <div hidden>
+      <img src='assets/destination/image-mars.png' alt="The Planet Mars"/>
+    </div>
+    <!-- Europa -->
+    <div hidden>
+      <img src="assets/destination/image-europa.png" alt="The Planet Europa">
+    </div>
+    <!-- Titan -->
+    <div hidden>
+      <img src="assets/destination/image-titan.png" alt="The Moon Titan">
+    </div>
+
+    <!-- When I work on this next, remove the picture element, 
+         switch it to the div and then see if the hidden attribut will work -->
 
     <div class="tab-list underline-indicator flex">
       <button aria-selected="true" class="uppercase letter-spacing-2 text-accent ff-sans-cond active">Moon</button>
@@ -71,6 +85,74 @@
       </div>
 
     </article>
+
+    <!-- Mars -->
+    <article hidden class="destination-info flow">
+      <h2 class="uppercase fs-800 ff-serif">Mars</h2>
+
+      <p>Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
+      the tallest planetary mountain in our solar system. It’s two and a half times 
+      the size of Everest!</p>
+
+      <div class="destination-meta flex">
+        <div>
+          <h3 class="uppercase text-accent fs-200">Avg. distance</h3>
+          <p class="uppercase ff-serif">225 mil. km</p>
+        </div>
+
+        <div>
+          <h3 class="uppercase text-accent fs-200">Est. travel time</h3>
+          <p class="uppercase ff-serif">9 months</p>
+        </div>
+      </div>
+    
+    </article>
+
+    <!--Europa  -->
+    <article hidden class="destination-info flow">
+      <h2 class="uppercase fs-800 ff-serif">Europa</h2>
+
+      <p>The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
+      winter lover’s dream. With an icy surface, it’s perfect for a bit of 
+      ice skating, curling, hockey, or simple relaxation in your snug 
+      wintery cabin.</p>
+
+      <div class="destination-meta flex">
+        <div>
+          <h3 class="uppercase fs-200 text-accent">Avg. distance</h3>
+          <p class="uppercase ff-serif">628 mil. km</p>
+        </div>
+
+        <div>  
+          <h3 class="uppercase fs-200 text-accent">Est. travel time</h3>
+          <p class="uppercase ff-serif">3 years</p>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- Titan -->
+    <article hidden class="destination-info flow">
+      <h2 class="uppercase fs-800 ff-serif">Titan</h2>
+
+      <p>The only moon known to have a dense atmosphere other than Earth, Titan 
+      is a home away from home (just a few hundred degrees colder!). As a 
+      bonus, you get striking views of the Rings of Saturn.</p>
+
+      <div class="destination-meta flex">
+        <div>
+          <h3 class="uppercase text-accent fs-200">Avg. distance</h3>
+          <p class="uppercase ff-serif">1.6 bil. km</p>
+        </div>  
+
+        <div>
+          <h3 class="uppercase text-accent fs-200">Est. travel time</h3>
+          <p class="uppercase ff-serif">7 years</p>
+        </div>
+      </div>
+
+    </article>
+
   </main>
 </body>
 </html>

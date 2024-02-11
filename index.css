@@ -646,7 +646,7 @@ body {
 }
 
 
-.grid-container--destination > picture {
+.grid-container--destination > .destination_img {
     grid-area:image;
     max-width: 60%;
 }
@@ -681,7 +681,7 @@ body {
         "info";
 }
 
-.grid-container--crew > picture {
+.grid-container--crew >.destination_img {
     grid-area:image;
     max-width: 60%;
     border-bottom: 1px solid hsl(var(hsl(var(--clr-white) / .1)));
@@ -757,8 +757,8 @@ body {
         ;
     }
 
-    .grid-container--destination > picture,
-    .grid-container--crew > picture
+    .grid-container--destination > .destination_img,
+    .grid-container--crew > .destination_img
     {
        max-width:90%;
        align-self: center;
@@ -783,7 +783,7 @@ body {
         justify-self: start;
     }
 
-    .grid-container--crew > picture {
+    .grid-container--crew > .destination_img {
         align-self: end;
     }
 }
