@@ -39,19 +39,19 @@
   <main id="main" class="grid-container grid-container--destination flow">
     <h1 class="numbered-title"><span aria-hidden="true">01</span> Pick your destination</h1>
     <!-- Moon -->
-    <div class="destination_img">
+    <div role="tabImg" id="img-moon-tab" class="destination_img">
       <img src='assets/destination/image-moon.png' alt="the moon"/>
     </div>
     <!-- Mars -->
-    <div hidden>
+    <div role="tabImg" id="img-mars-tab" class="destination_img" hidden>
       <img src='assets/destination/image-mars.png' alt="The Planet Mars"/>
     </div>
     <!-- Europa -->
-    <div hidden>
+    <div role="tabImg" id="img-europa-tab" class="destination_img" hidden>
       <img src="assets/destination/image-europa.png" alt="The Planet Europa">
     </div>
     <!-- Titan -->
-    <div hidden>
+    <div role="tabImg" id="img-titan-tab" class="destination_img" hidden>
       <img src="assets/destination/image-titan.png" alt="The Moon Titan">
     </div>
 
@@ -69,7 +69,7 @@
         class="uppercase letter-spacing-2 text-accent ff-sans-cond" tabindex="-1">Titan</button>
     </div>
 
-    <article class="destination-info flow" id="moon-tab" tabindex="0">
+    <article class="destination-info flow" id="moon-tab" tabindex="0" role="tabpanel">
       <h2 class="fs-800 uppercase ff-serif">Moon</h2>
 
       <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
@@ -91,7 +91,7 @@
     </article>
 
     <!-- Mars -->
-    <article hidden class="destination-info flow" id="mars-tab" tabindex="0">
+    <article hidden class="destination-info flow" id="mars-tab" tabindex="0" role="tabpanel">
       <h2 class="uppercase fs-800 ff-serif">Mars</h2>
 
       <p>Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
@@ -113,7 +113,7 @@
     </article>
 
     <!--Europa  -->
-    <article hidden class="destination-info flow" id="europa-tab" tabindex="0">
+    <article hidden class="destination-info flow" id="europa-tab" tabindex="0" role="tabpanel">
       <h2 class="uppercase fs-800 ff-serif">Europa</h2>
 
       <p>The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
@@ -136,7 +136,7 @@
     </article>
 
     <!-- Titan -->
-    <article hidden class="destination-info flow" id="titan-tab" tabindex="0">
+    <article hidden class="destination-info flow" id="titan-tab" tabindex="0" role="tabpanel">
       <h2 class="uppercase fs-800 ff-serif">Titan</h2>
 
       <p>The only moon known to have a dense atmosphere other than Earth, Titan 

@@ -3,30 +3,63 @@ const tabs = tabList.querySelectorAll('[role="tab"]')
 
 let tabFocus=0;
 
-tabList.addEventListener('keydown', (e) => {
+tabList.addEventListener('keydown', changeTabFocus)
+
+tabs.forEach((tab) => {
+    tab.addEventListener('click', changeTabPanel);
+})
+
+function changeTabFocus(e) {
     const keydownLeft = 37;
     const keydownRight = 39;
 
     // console.log('event', e.target.attributes.tabindex)
     // change the tabindex of the current tab to  -1
     if(e.keyCode === keydownLeft || e.keyCode === keydownRight) {
-        tabs[tabFocus].setAttribute('tabindex', "-1");
+        tabs[tabFocus].setAttribute('tabindex', -1);
     }
     // if I keydown right, I will go to the right
-    console.log('the current before it changes',tabFocus)
     if(e.keyCode === keydownRight){
-        tabs[tabFocus].setAttribute('aria-selected', 'false')
-        console.log('check the aria selected', tabs[tabFocus])
-        if(tabFocus===3){
-            tabFocus = 0;
-            tabs[tabFocus].setAttribute('aria-selected', 'true')
-            console.log('previous', tabs[3])
+        if(tabFocus >= tabs.length -1){
+            tabFocus=0
         } else {
             tabFocus++
-            tabs[tabFocus].setAttribute('aria-selected', 'true')
-            console.log('previous', tabs[tabFocus - 1])
         }
     }
     // if I keydown left, I will go to the left
-    console.log('current tab', tabs[tabFocus])
+
+    if(e.keyCode ===keydownLeft){
+        if(tabFocus <=0){
+            tabFocus = tabs.length-1
+        } else {
+            tabFocus--
+        }
+    }
+    console.log('current index', tabFocus)
+    tabs[tabFocus].setAttribute('tabindex', 0)
+    tabs[tabFocus].focus()
+} 
+
+function changeTabPanel(e){
+    const targetTab = e.target
+    const targetPanel = targetTab.getAttribute('aria-controls')
+
+    const tabContainer = targetTab.parentNode;
+    const mainContainer = tabContainer.parentNode;
+
+    mainContainer
+        .querySelectorAll('[role="tabpanel"]')
+        .forEach((panel)=>{
+        panel.setAttribute('hidden', true);
+    })
+    mainContainer.querySelector(`#${targetPanel}`).removeAttribute("hidden")
+
+    mainContainer
+    .querySelectorAll('[role="tabImg"]')
+    .forEach((img)=>{
+    img.setAttribute('hidden', true);
 })
+
+mainContainer.querySelector(`#img-${targetPanel}`).removeAttribute("hidden")
+
+}
