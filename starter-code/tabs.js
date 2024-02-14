@@ -46,14 +46,14 @@ function changeTabPanel(e){
 
     const tabContainer = targetTab.parentNode;
     const mainContainer = tabContainer.parentNode;
-
+    /* This fetches the panel information */
     mainContainer
         .querySelectorAll('[role="tabpanel"]')
         .forEach((panel)=>{
         panel.setAttribute('hidden', true);
     })
     mainContainer.querySelector(`#${targetPanel}`).removeAttribute("hidden")
-
+    /* This fetches the image as well */
     mainContainer
     .querySelectorAll('[role="tabImg"]')
     .forEach((img)=>{
