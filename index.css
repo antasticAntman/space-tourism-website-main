@@ -789,6 +789,6 @@ body {
 }
 
 
-[role="tab"]:focus {
+/* [role="tab"]:focus {
     color:limegreen
-}
+} */

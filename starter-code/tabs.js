@@ -43,23 +43,41 @@ function changeTabFocus(e) {
 function changeTabPanel(e){
     const targetTab = e.target
     const targetPanel = targetTab.getAttribute('aria-controls')
+    const targetImg = targetTab.getAttribute('data-image')
 
     const tabContainer = targetTab.parentNode;
     const mainContainer = tabContainer.parentNode;
     /* This fetches the panel information */
-    mainContainer
-        .querySelectorAll('[role="tabpanel"]')
-        .forEach((panel)=>{
-        panel.setAttribute('hidden', true);
-    })
+    hideContent(mainContainer, '[role="tabpanel"]');
+    // mainContainer
+    //     .querySelectorAll('[role="tabpanel"]')
+    //     .forEach((panel)=>{
+    //     panel.setAttribute('hidden', true);
+    // })
     mainContainer.querySelector(`#${targetPanel}`).removeAttribute("hidden")
     /* This fetches the image as well */
     mainContainer
-    .querySelectorAll('[role="tabImg"]')
-    .forEach((img)=>{
-    img.setAttribute('hidden', true);
+        .querySelectorAll('[role="tabImg"]')
+        .forEach((img)=>{
+        img.setAttribute('hidden', true);
 })
 
-mainContainer.querySelector(`#img-${targetPanel}`).removeAttribute("hidden")
+    mainContainer.querySelector(`#${targetImg}`).removeAttribute("hidden")
 
+    // Set the tab as active
+
+    tabContainer
+        .querySelector('[aria-selected="true"]')
+        .setAttribute('aria-selected', false)
+    
+    targetTab.setAttribute('aria-selected', true)
+    console.log(targetTab)
+}
+
+function hideContent(parent, content){
+    parent
+        .querySelectorAll(content)
+        .forEach((item)=>{
+        item.setAttribute('hidden', true);
+})
 }
