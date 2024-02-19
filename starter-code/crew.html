@@ -41,14 +41,15 @@
     
     <h1 class="numbered-title grid-title"><span aria-hidden="true">02</span> Meet your crew</h1>
     
-    <div class="dot-indicators flex">
-      <button aria-selected="true" class="active"><span class="sr-only">The Commander</span></button>
-      <button aria-selected="false"><span class="sr-only">The Mission Specialist</span></button>
-      <button aria-selected="false"><span class="sr-only">The Pilot</span></button>
-      <button aria-selected="false"><span class="sr-only">The Engineer</span></button>
+    <div class="dot-indicators flex" role="dotList" aria-label="dot list of members">
+      <button role='dot' dotindex="0" data-image="commanderImg" aria-controls="commander" aria-selected="true"><span class="sr-only">The Commander</span></button>
+      <button role='dot' dotindex="-1" data-image="missionImg" aria-controls="missionSpecialist" aria-selected="false"><span class="sr-only">The Mission Specialist</span></button>
+      <button role='dot' dotindex="-1" data-image="pilotImg" aria-controls="pilot" aria-selected="false"><span class="sr-only">The Pilot</span></button>
+      <button role='dot' dotindex="-1" data-image="engineerImg" aria-controls="engineer" aria-selected="false"><span class="sr-only">The Engineer</span></button>
     </div>
 
-    <article class="crew-details flow">
+    <!-- Commander Page -->
+    <article class="crew-details flow" id="commander" dotindex="0" role="dotpanel">
       <header class="flow flow--space-small">
         <h2 class="uppercase fs-600 ff-serif ">Commander</h2>
         <p class="uppercase fs-700 ff-serif">Douglas Hurley</p>
@@ -58,21 +59,56 @@
       and former NASA astronaut. He launched into space for the third time as 
       commander of Crew Dragon Demo-2</p>
     </article>
+    <!-- Engineer Page -->
+    <article class="crew-details flow" id="engineer" dotindex="0" role="dotpanel" hidden>
+      <header class="flow flow--space-small">
+        <h2 class="uppercase fs-600 ff-serif">Flight Engineer</h2>
+        <p class="uppercase fs-700 ff-serif">Anousheh Ansari</p>
+      </header>
+
+      <p class="text-accent">Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. 
+      Ansari was the fourth self-funded space tourist, the first self-funded woman to 
+      fly to the ISS, and the first Iranian in space.</p> 
+    </article>
+    <!-- Pilot Page -->
+    <article class="crew-details flow" id="pilot" dotindex="0" role="dotpanel" hidden>
+      <header class="flow flow--space-small">
+        <h2 class="uppercase fs-600 ff-serif">Pilot</h2>
+        <p class="uppercase fs-700 ff-serif">Victor Glover</p>
+      </header>
+
+      <p class="text-accent">Pilot on the first operational flight of the SpaceX Crew Dragon to the 
+      International Space Station. Glover is a commander in the U.S. Navy where 
+      he pilots an F/A-18.He was a crew member of Expedition 64, and served as a 
+      station systems flight engineer.</p> 
+    </article>
+    <!-- Specialist Page -->
+    <article class="crew-details flow" id="missionSpecialist" dotindex="0" role="dotpanel" hidden>
+      <header class="flow flow--space-small">
+        <h2 class="uppercase ff-serif fs-600">Mission Specialist</h2>
+        <p class="uppercase ff-serif fs-700">Mark Shuttleworth</p>
+      </header>
+
+      <p class="text-accent">Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind 
+      the Linux-based Ubuntu operating system. Shuttleworth became the first South 
+      African to travel to space as a space tourist.</p>
+    </article>
+
 
     <!-- Crew Commander -->
-    <div class="image_panel">   
+    <div role="dotImg" id="commanderImg" class="image_panel">   
       <img src="./assets/crew/image-douglas-hurley.png" alt="crew commander Douglas Gerald Hurley"/>
     </div>
     <!-- Crew Engineer -->
-    <div class="image_panel" hidden>
+    <div role="dotImg" id="engineerImg" class="image_panel" hidden>
       <img src="./assets/crew/image-anousheh-ansari.png" alt="crew engineer">
     </div>
     <!-- Crew Pilot -->
-    <div class="image_panel" hidden>
+    <div role="dotImg" id="pilotImg" class="image_panel" hidden>
       <img src="./assets/crew/image-victor-glover.png" alt="The Crew Pilot"/>
     </div>
     <!-- Mission Specialist -->
-    <div class="image_panel" hidden>
+    <div role="dotImg" id="missionImg" class="image_panel" hidden>
       <img src="./assets/crew/image-mark-shuttleworth.png" alt="The Mission Specialist">
     </div>
 
