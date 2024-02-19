@@ -17,24 +17,21 @@ function changeTabFocus(e) {
     // change the tabindex of the current tab to  -1
     if(e.keyCode === keydownLeft || e.keyCode === keydownRight) {
         tabs[tabFocus].setAttribute('tabindex', -1);
-    }
-    // if I keydown right, I will go to the right
-    if(e.keyCode === keydownRight){
-        if(tabFocus >= tabs.length -1){
-            tabFocus=0
-        } else {
-            tabFocus++
+        if(e.keyCode === keydownRight){            // if I keydown left, I will go to the left
+            if(tabFocus >= tabs.length -1){
+                tabFocus=0
+            } else {
+                tabFocus++
+            }
+        } else if(e.keyCode === keydownLeft){      // if I keydown left, I will go to the left
+            if(tabFocus <=0){
+                tabFocus = tabs.length-1
+            } else {
+                tabFocus--
+            }
         }
     }
-    // if I keydown left, I will go to the left
 
-    if(e.keyCode ===keydownLeft){
-        if(tabFocus <=0){
-            tabFocus = tabs.length-1
-        } else {
-            tabFocus--
-        }
-    }
     console.log('current index', tabFocus)
     tabs[tabFocus].setAttribute('tabindex', 0)
     tabs[tabFocus].focus()
@@ -49,21 +46,12 @@ function changeTabPanel(e){
     const mainContainer = tabContainer.parentNode;
     /* This fetches the panel information */
     hideContent(mainContainer, '[role="tabpanel"]');
-    // mainContainer
-    //     .querySelectorAll('[role="tabpanel"]')
-    //     .forEach((panel)=>{
-    //     panel.setAttribute('hidden', true);
-    // })
-    mainContainer.querySelector(`#${targetPanel}`).removeAttribute("hidden")
+
+    revealContent(mainContainer, `#${targetPanel}`)
     /* This fetches the image as well */
-    mainContainer
-        .querySelectorAll('[role="tabImg"]')
-        .forEach((img)=>{
-        img.setAttribute('hidden', true);
-})
 
-    mainContainer.querySelector(`#${targetImg}`).removeAttribute("hidden")
-
+    hideContent(mainContainer, '[role="tabImg"]');
+    revealContent(mainContainer, `#${targetImg}`)
     // Set the tab as active
 
     tabContainer
@@ -80,4 +68,8 @@ function hideContent(parent, content){
         .forEach((item)=>{
         item.setAttribute('hidden', true);
 })
+}
+
+function revealContent(parent, content) {
+    parent.querySelector(content).removeAttribute("hidden")
 }
