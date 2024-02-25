@@ -10,36 +10,32 @@ let currentDot = 0
 // and set the current dotindex to 0
 dotlist.addEventListener('keydown', changeDotFocus)
 
-// dotlist.addEventListener('click', (e) => {
-//     const targetDot = e.target
-//     console.log('click', targetDot)
-//     const targetPanel = targetDot.getAttribute('aria-control')
-//     const targetImage = targetDot.getAttribute('data-image')
-
-//     const dotContainer = targetDot.parentNode
-//     console.log('dotCOntainer', dotContainer)
-// })
+// I want for each dot to change the information and image that matches to the dot
 
 dots.forEach((dot)=>{
     dot.addEventListener('click', (e) => {
-        console.log('click')
-        const targetDot = e.target
-        console.log('target',targetDot)
-        const targetPanel = targetDot.getAttribute('aria-controls')
-        // console.log('targetpanel',targetPanel)
-        const targetImage = targetDot.getAttribute('data-image')
-        const dotContainer = targetDot.parentNode
-        const mainDotContainer = dotContainer.parentNode
+        const selectedDot = e.target
+        // console.log('selected dot', selectedDot)
+        const selectedPanel = selectedDot.getAttribute('aria-controls')
+        // console.log('selected info', selectedPanel)
+        const selectedImg = selectedDot.getAttribute('data-image')
+        // console.log('selected image', selectedImg)
+        const dotContainer = dot.parentNode
+        const mainContainer = dotContainer.parentNode
+        // console.log('container', mainContainer)
 
-        mainDotContainer.querySelectorAll('[role="dotpanel"]').forEach((panel)=> {
-            panel.setAttribute('hidden', true)
-        })
+        // I want to change the info to the selected page
+        hideSection(mainContainer, '[role="dotpanel"]')
+        revealContent(mainContainer, `#${selectedPanel}`)
+        // I want to reveal the image matching the page
+        hideSection(mainContainer, '[role="dotImg"]')
+        revealContent(mainContainer, `#${selectedImg}`)
 
-        mainDotContainer.querySelector(`#${targetPanel}`).removeAttribute('hidden')
-
-        
+        dotContainer.querySelector('[aria-selected="true"]').setAttribute('aria-selected', false)
+        dotContainer.querySelector(`[aria-controls=${selectedPanel}]`).setAttribute('aria-selected',true)
     })
 })
+
 
 function changeDotFocus(e){
     if(e.keyCode === keydownLeft || e.keyCode === keydownRight){
@@ -60,4 +56,14 @@ function changeDotFocus(e){
     }
     dots[currentDot].setAttribute('dotindex','0')
     dots[currentDot].focus()
+}
+
+function hideSection(parent, content){
+    parent.querySelectorAll(content).forEach((item)=>{
+        item.setAttribute('hidden', true)
+    })
+}
+
+function revealContent(parent, content) {
+    parent.querySelector(content).removeAttribute('hidden')
 }
