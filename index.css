@@ -649,6 +649,7 @@ body {
 .grid-container--destination > .image_panel {
     grid-area:image;
     max-width: 60%;
+    align-self: start;
 }
 
 .grid-container--destination > .tab-list {
@@ -727,7 +728,7 @@ body {
     .grid-container {
         text-align: left;
         column-gap: var(--container-gap, 2rem);
-        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0,30rem)) minmax(1rem, 1fr);
+        grid-template-columns: minmax(1rem, 1fr) minmax(0,35rem) minmax(0,25rem) minmax(1rem, 1fr);
     }
 
     .grid-container--home > *:first-child {
@@ -761,7 +762,6 @@ body {
     .grid-container--crew > .image_panel
     {
        max-width:90%;
-       align-self: center;
     }
 
     .destination-meta {
