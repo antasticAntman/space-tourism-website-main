@@ -613,6 +613,10 @@ body {
     }
 }
 
+
+.technology {
+    background-image: url(./starter-code/assets/technology/background-technology-mobile.jpg);
+}
 /* ------------------------ */
 /* Layout */
 /* ------------------------ */
