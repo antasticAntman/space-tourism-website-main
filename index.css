@@ -808,6 +808,34 @@ body {
 }
 
 
+/* Technolgy page */
+
+.grid-container--technology {
+    grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content"
+    ;
+}
+
+.grid-container--technology > .grid-title {
+    grid-area: title;
+}
+
+.grid-container--technology >.tech_img {
+    grid-area: image;
+}
+
+.grid-container--technology > .number-indicators {
+    grid-area: tabs;
+    display: flex;
+}
+
+.grid-container--technology > .technology-info {
+    grid-area: content;
+}
+
 /* [role="tab"]:focus {
     color:limegreen
 } */
