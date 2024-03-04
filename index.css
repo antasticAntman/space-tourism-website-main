@@ -718,7 +718,7 @@ body {
     grid-area: info;
 }
 
-@media (min-width:35em) { /*Tablet layout*/
+@media (min-width:20em) { /*Tablet layout*/
     .numbered-title {
         justify-self: start;
         margin-top: 2rem;
