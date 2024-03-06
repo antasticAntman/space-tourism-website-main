@@ -718,7 +718,37 @@ body {
     grid-area: info;
 }
 
-@media (min-width:20em) { /*Tablet layout*/
+/* technology page layout */
+
+
+.grid-container--technology {
+    --flow-space:1.5rem;
+    grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content"
+    ;
+}
+
+.grid-container--technology > .grid-title {
+    grid-area: title;
+}
+
+.grid-container--technology >.tech_img {
+    grid-area: image;
+}
+
+.grid-container--technology > .number-indicators {
+    grid-area: tabs;
+    display: flex;
+}
+
+.grid-container--technology > .technology-info {
+    grid-area: content;
+}
+
+@media (min-width:35em) { /*Tablet layout*/
     .numbered-title {
         justify-self: start;
         margin-top: 2rem;
@@ -738,6 +768,15 @@ body {
             "tabs"
             "image";
     }
+
+    .grid-container--technology {
+        padding:0;
+        grid-template-areas: 
+            "title"
+            "image"
+            "tabs"
+            "content";
+        }
 }
 
 
@@ -805,36 +844,38 @@ body {
         align-self: end;
         max-width: 60%;
     }
+
+    /* Technology portion */
+
+    .grid-container--technology > .number-indicators {
+        display: grid;
+    }
+
+
+    .grid-container--technology{
+        --flow-space:1rem;
+        grid-template-columns: minmax(1rem, 1fr) minmax(0,10rem) minmax(0,35rem) minmax(0, 8em) minmax(1rem,1fr);
+        justify-items: center;
+        align-items: center;
+        column-gap: var(--container-gap, 3em);
+        grid-template-areas: 
+            ". title title title ."
+            ". tabs content image .";
+    }
+
+    .grid-container--technology > .tech_img {
+        aspect-ratio: 1;
+        grid-column: span 4;
+        max-height: 85%;
+        max-width: 100%;
+        justify-self: end;
+    }
+
+    .tech_img > img{
+        aspect-ratio: 1;
+    }
 }
 
-
-/* Technolgy page */
-
-.grid-container--technology {
-    grid-template-areas:
-    "title"
-    "image"
-    "tabs"
-    "content"
-    ;
-}
-
-.grid-container--technology > .grid-title {
-    grid-area: title;
-}
-
-.grid-container--technology >.tech_img {
-    grid-area: image;
-}
-
-.grid-container--technology > .number-indicators {
-    grid-area: tabs;
-    display: flex;
-}
-
-.grid-container--technology > .technology-info {
-    grid-area: content;
-}
 
 /* [role="tab"]:focus {
     color:limegreen
