@@ -879,7 +879,7 @@ body {
 
     .grid-container--technology > .technology-info{
         border:1px solid yellow;
-        margin: auto;
+        /* margin: auto; */
         margin-left: 8%;
         align-self: center;
     }
