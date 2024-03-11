@@ -168,6 +168,10 @@ select {
     display:block;
 }
 
+.fluff {
+    /* padding-inline:1rem; */
+}
+
 .flow > *:where(:not(:first-child)){  
     /* ^^ Looking for adjecient siblings that come before it 
     selector examples: 
@@ -854,21 +858,27 @@ body {
 
     .grid-container--technology {
         --flow-space:2rem;
-        grid-template-columns: minmax(1rem, 1fr) minmax(0,4.5rem) minmax(0,31rem) minmax(0,30rem) minmax(1rem, 1fr);
+        grid-template-columns: minmax(1rem, 1fr) minmax(0,6rem) minmax(0,32rem) minmax(0, 5rem);
         justify-items: center;
         align-items: center;
-        column-gap: var(--container-gap, 3rem);
+        column-gap: var(--container-gap, 1.5rem);
         grid-template-areas: 
-            ". title title title."
-            ". tabs content image  ."
+            ". title title ."
+            ". tabs content image "
         ;
+        border: 3px solid cyan;
+    }
+
+    .technology-info > p{
+        border:5px solid slateblue;
+        max-width:50ch;
     }
 
     .grid-container--technology > .tech_img{
         grid-column: span 2;
         justify-self: end;
         aspect-ratio: 1;
-        max-height: 87%;
+        max-height: 87%; 
         max-width: 87%;
         margin-bottom:40px;
     }
@@ -878,33 +888,12 @@ body {
     }
 
     .grid-container--technology > .technology-info{
-        border:1px solid yellow;
+        /* border:4px solid yellow; */
         /* margin: auto; */
         margin-left: 8%;
         align-self: center;
     }
-    /* .grid-container--technology{
-        --flow-space:1rem;
-        grid-template-columns: minmax(1rem, 1fr) minmax(0,10rem) minmax(0,35rem) minmax(0, 8em) minmax(1rem,1fr);
-        justify-items: center;
-        align-items: center;
-        column-gap: var(--container-gap, 3em);
-        grid-template-areas: 
-            ". title title title ."
-            ". tabs content image .";
-    }
 
-    .grid-container--technology > .tech_img {
-        aspect-ratio: 1;
-        grid-column: span 4;
-        max-height: 85%;
-        max-width: 100%;
-        justify-self: end;
-    }
-
-    .tech_img > img{
-        aspect-ratio: 1;
-    } */
 }
 
 
