@@ -36,12 +36,17 @@
   </header>
 
   <main class="grid-container grid-container--technology flow">
-    <h1 class="numbered-title"><span>03</span>Space launch 101</h1>
+    <h1 class="numbered-title inline-start-flow"><span>03</span>Space launch 101</h1>
     
-    <div class="tech_img">
-      <img src="./assets/technology/image-launch-vehicle-portrait.jpg">
-    </div>
+     <picture class="tech_img">
+      <source media="(min-width:45rem)" srcset=./assets/technology/image-launch-vehicle-portrait.jpg  type="image/jpg"> 
+      <source srcset=./assets/technology/image-launch-vehicle-landscape.jpg type="image/webp">
+      <img class="special_img" src="./assets/technology/image-launch-vehicle-landscape.jpg">
+    </picture> 
     
+    <!-- <div class="tech_img">
+      <img class="special_img" src="./assets/technology/image-launch-vehicle-landscape.jpg">
+    </div> -->
 
     <article class="technology-info flow ">
 
@@ -51,13 +56,13 @@
         <button aria-selected="false">3</button>
       </div>
       
-      <div class="fit-container">
+      <div class="fit-container flow">
         <header class="flow ff-serif flow--space-small ">
-          <h2 class="text-accent fs-200 uppercase ">The terminology...</h2>
+          <h2 class="text-accent fs-200 uppercase">The terminology...</h2>
           <p class="fs-700 uppercase special_text">Launch vehicle</p>
         </header>
 
-        <p class="text-accent ff-serif fs-400">
+        <p class="text-accent ff-serif fs-400 shrink-container">
           A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
           payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
           WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
