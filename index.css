@@ -919,6 +919,7 @@ body {
             ". title title ."
             ". content image ."
         ;
+        margin-bottom: 4rem;
     }
 
     .technology-info {
@@ -929,7 +930,7 @@ body {
         grid-column: span 2;
         justify-self: end;
         aspect-ratio: 1;
-        max-height: 90%; 
+        /* max-height: 95%;  */
         max-width: 90%;
     }
     
