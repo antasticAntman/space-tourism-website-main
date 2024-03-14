@@ -13,27 +13,41 @@
   <link rel="stylesheet" href="../index.css">
 
   <title>Frontend Mentor | Space tourism website</title>
-  <script src="./dot.js"></script>
+  <script src="./dot.js" defer></script>
 </head>
 <body class="technology">
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+  <a class="skip-to-content" href="#main">Skip link to main</a>
 
-  03 Space launch 101
+  <header class="primary-header flex">
+    <div>
+      <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo"/>
+    </div>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
+    <nav>
+      <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicator flex">
+          <li><a class="uppercase ff-sans-cond text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a>
+          <li><a class="uppercase ff-sans-cond text-white letter-spacing-2" href="destination.html"><span aria-hidden="true">01</span>Destination</a>
+          <li><a class="uppercase ff-sans-cond text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span>Crew</a>
+          <li class="active"><a class="uppercase ff-sans-cond text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">03</span>Technology</a>
+      </ul>
+    </nav>
+  </header>
 
-  1
-  2
-  3
+  <main>
+    03 Space launch 101
 
-  The terminology...
-  Spaceport
+    1
+    2
+    3
 
-  A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
-  by analogy to the seaport for ships or airport for aircraft. Based in the 
-  famous Cape Canaveral, our spaceport is ideally situated to take advantage 
-  of the Earth’s rotation for launch.
+    The terminology...
+    Spaceport
+
+    A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
+    by analogy to the seaport for ships or airport for aircraft. Based in the 
+    famous Cape Canaveral, our spaceport is ideally situated to take advantage 
+    of the Earth’s rotation for launch.
+  </main>
 </body>
 </html>
