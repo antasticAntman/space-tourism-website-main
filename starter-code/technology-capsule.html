@@ -16,7 +16,9 @@
 
 </head>
 <body class="technology">
+
   <a class="skip-to-content" href="#main">Skip link to main</a>
+
     <header class="primary-header flex">
       <div>
         <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo"/>
@@ -35,33 +37,37 @@
     <main id="main" class="flow grid-container grid-container--technology">
       
       <h1 class="numbered-title grid-title"><span>03</span>Space launch 101</h1>
+    
+      <picture class="tech_img">
+        <source media="(min-width:45rem)" srcset=./assets/technology/image-space-capsule-portrait.jpg  type="image/jpg"> 
+        <source srcset=./assets/technology/image-space-capsule-landscape.jpg type="image/webp">
+        <img class="special_img" src="./assets/technology/image-space-capsule-portrait.jpg">
+      </picture> 
 
-      <div class="tech_img">
-        <img src="./assets/technology/image-space-capsule-landscape.jpg">
-      </div>
+      <article class="technology-info flow">
 
-      <div class="number-indicators flex">
-        <button aria-selected="true" class="active">1</button>
-        <button aria-selected="false">2</button>
-        <button aria-selected="false">3</button>
-      </div>
+        <div class="number-indicators flex">
+          <button aria-selected="true" class="active">1</button>
+          <button aria-selected="false">2</button>
+          <button aria-selected="false">3</button>
+        </div>
 
-      <article class="technology-info flow flow--space-small">
-        <header class="flow">
-          <h2 class="fs-300 uppercase ff-serif text-accent">The terminology...</h2>
-          <p class="uppercase fs-700">Space capsule</p>
-        </header>
+        <div class="fit-container flow">
+          <header class="flow ff-serif flow--space-small">
+            <h2 class="fs-200 uppercase text-accent">The terminology...</h2>
+            <p class="uppercase fs-700 special_text">Space capsule</p>
+          </header>
 
-        <p class="text-accent ff-serif">
-          A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
-          capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
-          you'll spend your time during the flight. It includes a space gym, cinema, 
-          and plenty of other activities to keep you entertained.
-        </p>
+          <p class="text-accent ff-serif fs-400 shrink-container">
+            A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
+            capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
+            you'll spend your time during the flight. It includes a space gym, cinema, 
+            and plenty of other activities to keep you entertained.
+          </p>
 
-
+        </div>
       </article>
-
+      
     </main>
 </body>
 </html>
