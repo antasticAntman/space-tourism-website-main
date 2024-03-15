@@ -36,9 +36,7 @@
 
   <main id="main" class="grid-container grid-container--technology flow">
 
-    <h1 class="numbered-title"><span>03</span>Space launch 101</h1>
-
-    <!-- <img src="assets/technology/image-spaceport-landscape.jpg"> -->
+    <h1 class="numbered-title inline-start-flow"><span>03</span>Space launch 101</h1>
 
     <picture class="tech_img">
       <source media="(min-width:45rem)" srcset=assets/technology/image-spaceport-portrait.jpg  type="image/jpg"> 
@@ -46,17 +44,30 @@
       <img class="special_img" src="./assets/technology/image-launch-vehicle-landscape.jpg">
     </picture> 
 
-    1
-    2
-    3
+    <article class="technology-info flow">
 
-    The terminology...
-    Spaceport
+      <div class="number-indicators flex">
+        <button aria-selected="true" class="active">1</button>
+        <button aria-selected="false">2</button>
+        <button aria-selected="false">3</button>
+      </div>
 
-    A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
-    by analogy to the seaport for ships or airport for aircraft. Based in the 
-    famous Cape Canaveral, our spaceport is ideally situated to take advantage 
-    of the Earth’s rotation for launch.
+      <div class="fit-container flow">
+        
+        <header class="flow flow--space-small ff-serif">
+          <h2 class="uppercase text-accent fs-200">The terminology...</h2>
+          <p class="uppercase fs-700 special_text">Spaceport</p>
+        </header>
+
+      <p class="text-accent fs-400 ff-serif shrink-container">
+        A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
+        by analogy to the seaport for ships or airport for aircraft. Based in the 
+        famous Cape Canaveral, our spaceport is ideally situated to take advantage 
+        of the Earth’s rotation for launch.
+      </p>
+
+      </div>
+    </article>
   </main>
 </body>
 </html>
