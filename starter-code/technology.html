@@ -40,18 +40,40 @@
     
     <h1 class="numbered-title inline-start-flow"><span>03</span>Space launch 101</h1>
     
-     <picture class="tech_img">
-      <source media="(min-width:45rem)" srcset=./assets/technology/image-launch-vehicle-portrait.jpg  type="image/jpg"> 
-      <source srcset=./assets/technology/image-launch-vehicle-landscape.jpg type="image/webp">
-      <img class="special_img" src="./assets/technology/image-launch-vehicle-landscape.jpg">
-    </picture> 
+    <!-- Vehicle -->
+    <div class="tech_img" role="numberImg" id="vehicleImg">
+      <picture >
+        <source media="(min-width:45rem)" srcset=./assets/technology/image-launch-vehicle-portrait.jpg  type="image/jpg"> 
+        <source srcset=./assets/technology/image-launch-vehicle-landscape.jpg type="image/jpg">
+        <img class="special_img" src="./assets/technology/image-launch-vehicle-landscape.jpg">
+      </picture> 
+    </div>
     
-    <article class="technology-info flow">
+    <!-- Spaceport -->
+    <div class="tech_img" role="numberImg" id="spaceportImg" hidden>
+      <picture> 
+        <source media="(min-width:45rem)" srcset=assets/technology/image-spaceport-portrait.jpg  type="image/jpg"> 
+        <source srcset=assets/technology/image-spaceport-landscape.jpg type="image/jpg">
+        <img class="special_img" src="assets/technology/image-spaceport-portrait.jpg">
+      </picture> 
+    </div>
 
-      <div class="number-indicators flex">
-        <button aria-selected="true" class="active">1</button>
-        <button aria-selected="false">2</button>
-        <button aria-selected="false">3</button>
+    <!-- Capsule -->
+    <div class="tech_img" role="numberImg" id="capsuleImg" hidden>
+      <picture>
+        <source media="(min-width:45rem)" srcset=./assets/technology/image-space-capsule-portrait.jpg  type="image/jpg"> 
+        <source srcset=./assets/technology/image-space-capsule-landscape.jpg type="image/webp">
+        <img class="special_img" src="./assets/technology/image-space-capsule-portrait.jpg">      
+      </picture> 
+    </div>
+    
+    <!-- Vehicle Panel -->
+    <article class="technology-info flow" id="vehicle">
+
+      <div class="number-indicators flex" role="numberList" aria-label="number list for each page">
+        <button role="number" numIndex="0" data-image="vehicleImg" aria-selected="true" aria-controls="vehicle">1</button>
+        <button role="number" numIndex="-1" data-image="capsuleImg" aria-selected="false" aria-controls="capsule">2</button>
+        <button role="number" numIndex="-1" data-image="spaceportImg" aria-selected="false" aria-controls="spaceport">3</button>
       </div>
       
       <div class="fit-container flow">
@@ -69,6 +91,8 @@
         </p>
       </div>
     </article>  
+
+    
   </main>
 </body>
 </html>
