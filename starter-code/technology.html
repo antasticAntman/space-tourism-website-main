@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="../index.css">
 
   <title>Frontend Mentor | Space tourism website</title>
-  <script src="./javascript" defer></script>
+  <script src="./number.js" defer></script>
 </head>
 
 <body class="technology">
@@ -41,7 +41,7 @@
     <h1 class="numbered-title inline-start-flow"><span>03</span>Space launch 101</h1>
     
     <!-- Vehicle -->
-    <div class="tech_img" role="numberImg" id="vehicleImg">
+    <div class="tech_img" id="vehicle_img" role="num_img">
       <picture >
         <source media="(min-width:45rem)" srcset=./assets/technology/image-launch-vehicle-portrait.jpg  type="image/jpg"> 
         <source srcset=./assets/technology/image-launch-vehicle-landscape.jpg type="image/jpg">
@@ -50,7 +50,7 @@
     </div>
     
     <!-- Spaceport -->
-    <div class="tech_img" role="numberImg" id="spaceportImg" hidden>
+    <div class="tech_img" id="spaceport_img" role="num_img" hidden>
       <picture> 
         <source media="(min-width:45rem)" srcset=assets/technology/image-spaceport-portrait.jpg  type="image/jpg"> 
         <source srcset=assets/technology/image-spaceport-landscape.jpg type="image/jpg">
@@ -59,7 +59,7 @@
     </div>
 
     <!-- Capsule -->
-    <div class="tech_img" role="numberImg" id="capsuleImg" hidden>
+    <div class="tech_img" id="capsule_img" role="num_img" hidden>
       <picture>
         <source media="(min-width:45rem)" srcset=./assets/technology/image-space-capsule-portrait.jpg  type="image/jpg"> 
         <source srcset=./assets/technology/image-space-capsule-landscape.jpg type="image/webp">
@@ -68,30 +68,80 @@
     </div>
     
     <!-- Vehicle Panel -->
-    <article class="technology-info flow" id="vehicle">
-
-      <div class="number-indicators flex" role="numberList" aria-label="number list for each page">
-        <button role="number" numIndex="0" data-image="vehicleImg" aria-selected="true" aria-controls="vehicle">1</button>
-        <button role="number" numIndex="-1" data-image="capsuleImg" aria-selected="false" aria-controls="capsule">2</button>
-        <button role="number" numIndex="-1" data-image="spaceportImg" aria-selected="false" aria-controls="spaceport">3</button>
-      </div>
+    <article class="technology-info flow" id="vehicle" role="num_panel" numberindex="0" aria-hidden="false">
       
-      <div class="fit-container flow">
+        <div class="number-indicators flex" role='numberList' aria-label="number list for each page">
+          <button role="number" numberindex="0" data-image="vehicle_img" aria-controls="vehicle" aria-selected="true">1</button>
+          <button role="number" numberindex="-1" data-image="spaceport_img" aria-controls="spaceport" aria-selected="false">2</button>
+          <button role="number" numberindex="-1" data-image="capsule_img" aria-controls="capsule" aria-selected="false">3</button>
+        </div>
         
-        <header class="flow ff-serif flow--space-small ">
-          <h2 class="text-accent fs-200 uppercase">The terminology...</h2>
-          <p class="fs-700 uppercase special_text">Launch vehicle</p>
-        </header>
+        <div class="fit-container flow">
+          
+          <header class="flow ff-serif flow--space-small ">
+            <h2 class="text-accent fs-200 uppercase">The terminology...</h2>
+            <p class="fs-700 uppercase special_text">Launch vehicle</p>
+          </header>
 
-        <p class="text-accent ff-serif fs-400 shrink-container">
-          A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
-          payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
-          WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
-          it's quite an awe-inspiring sight on the launch pad!
-        </p>
+          <p class="text-accent ff-serif fs-400 shrink-container">
+            A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
+            payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
+            WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
+            it's quite an awe-inspiring sight on the launch pad!
+          </p>
       </div>
     </article>  
 
+    <!-- Spaceport Panel -->
+    <article class="technology-info flow" id="spaceport" role="num_panel" number-index="0" aria-hidden="true">
+
+          <div class="number-indicators flex">
+            <button aria-selected="false">1</button>
+            <button aria-selected="true">2</button>
+            <button aria-selected="false">3</button>
+          </div>
+    
+          <div class="fit-container flow">
+            
+            <header class="flow flow--space-small ff-serif">
+              <h2 class="uppercase text-accent fs-200">The terminology...</h2>
+              <p class="uppercase fs-700 special_text">Spaceport</p>
+            </header>
+    
+          <p class="text-accent fs-400 ff-serif shrink-container">
+            A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
+            by analogy to the seaport for ships or airport for aircraft. Based in the 
+            famous Cape Canaveral, our spaceport is ideally situated to take advantage 
+            of the Earth’s rotation for launch.
+          </p>
+    
+          </div>
+    </article>
+    
+    <!-- Capsule Panel -->
+    <article class="technology-info flow" id="capsule" role="num_panel" number-index="0" aria-hidden="true">
+
+      <div class="number-indicators flex">
+        <button aria-selected="false">1</button>
+        <button aria-selected="false">2</button>
+        <button aria-selected="true">3</button>
+      </div>
+
+      <div class="fit-container flow">
+        <header class="flow ff-serif flow--space-small">
+          <h2 class="fs-200 uppercase text-accent">The terminology...</h2>
+          <p class="uppercase fs-700 special_text">Space capsule</p>
+        </header>
+
+        <p class="text-accent ff-serif fs-400 shrink-container">
+          A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
+          capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
+          you'll spend your time during the flight. It includes a space gym, cinema, 
+          and plenty of other activities to keep you entertained.
+        </p>
+
+      </div>
+    </article>
     
   </main>
 </body>

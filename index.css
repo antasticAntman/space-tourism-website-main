@@ -771,6 +771,15 @@ body {
     margin:0;
 }
 
+.technology-info[aria-hidden='false']{
+    border: 2px solid pink;
+}
+
+.technology-info[aria-hidden='true']{
+    display: none;
+    border: 2px solid pink;
+}
+
 @media (min-width:35em) { /*Tablet layout*/
     .numbered-title {
         justify-self: start;
@@ -894,6 +903,10 @@ body {
 
     /* Technology portion */
 
+    .number-position {
+        display:flex;
+    }
+
     .technology-info >.number-indicators{
         display: grid;
         margin: 0 auto;
@@ -948,6 +961,7 @@ body {
         margin-bottom: 0px;
         margin-inline-start: 0px;
     }
+
 }
 
 
