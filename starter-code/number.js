@@ -12,10 +12,15 @@ numberList.addEventListener('keydown', highlightCurrentIndex)
 numbers.forEach( (num) => {
     num.addEventListener('click', (e) => {
         const selectedNum = e.target;
-        console.log("prefered Number", selectedNum)
+        // console.log("prefered Number", selectedNum)
         const selectedPanel = selectedNum.getAttribute("aria-controls")
-        console.log('The Specific Panel is', selectedPanel)
+        // console.log('The Specific Panel is', selectedPanel)
         const selectedImg = selectedNum.getAttribute("data-image")
+        
+        const numContainer = num.parentNode
+        const ArticleContainer = numContainer.parentNode
+        const parentContainer = ArticleContainer.parentNode
+        console.log("number parent Container", parentContainer)
     })
 })
 
