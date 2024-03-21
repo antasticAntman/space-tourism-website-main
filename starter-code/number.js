@@ -11,6 +11,11 @@ numberList.addEventListener('keydown', highlightCurrentIndex)
 
 numbers.forEach( (num) => {
     num.addEventListener('click', (e) => {
+        const selectedNum = e.target;
+        console.log("prefered Number", selectedNum)
+        const selectedPanel = selectedNum.getAttribute("aria-controls")
+        console.log('The Specific Panel is', selectedPanel)
+        const selectedImg = selectedNum.getAttribute("data-image")
     })
 })
 
