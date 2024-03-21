@@ -23,6 +23,7 @@ numbers.forEach( (num) => {
 
         parentContainer.querySelectorAll("[role=num_panel]").forEach( (panel) => {
             console.log('Panels', panel)
+            // For each panel, go through aria-hidden and toggle true, then reveal the new panel through the selected panel
         })
 
         console.log("number parent Container", parentContainer)
