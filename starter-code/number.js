@@ -20,6 +20,11 @@ numbers.forEach( (num) => {
         const numContainer = num.parentNode
         const ArticleContainer = numContainer.parentNode
         const parentContainer = ArticleContainer.parentNode
+
+        parentContainer.querySelectorAll("[role=num_panel]").forEach( (panel) => {
+            console.log('Panels', panel)
+        })
+
         console.log("number parent Container", parentContainer)
     })
 })
