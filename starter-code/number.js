@@ -9,7 +9,7 @@ const keydownDown=40;
 let currentIndex = 0;
 numberList.addEventListener('keydown', highlightCurrentIndex)
 
-numbers.forEach( (num) => {
+numbers.forEach((num) => {
     num.addEventListener('click', (e) => {
         const selectedNum = e.target;
         // console.log("prefered Number", selectedNum)
@@ -23,10 +23,10 @@ numbers.forEach( (num) => {
 
         parentContainer.querySelectorAll("[role=num_panel]").forEach( (panel) => {
             console.log('Panels', panel)
-            // For each panel, go through aria-hidden and toggle true, then reveal the new panel through the selected panel
+            panel.setAttribute('aria-hidden', true)
         })
 
-        console.log("number parent Container", parentContainer)
+        parentContainer.querySelector(`#${selectedPanel}`).setAttribute('aria-hidden', 'false')
     })
 })
 
