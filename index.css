@@ -185,7 +185,7 @@ select {
     */
     /* margin-top: 1rem; */
     margin-top: var(--flow-space, 1rem);
-    outline:1px solid red
+    /* outline:1px solid red */
 }
 
 .container {
@@ -345,7 +345,6 @@ select {
     margin:0;
     padding:0;
     list-style: none;
-    border:1px solid cyan;
     backdrop-filter: blur(1.5rem);
 }
 
@@ -645,7 +644,6 @@ body {
 .grid-container {
     text-align: center;
     display: grid;
-    border: 5px solid limegreen;
     place-items:center;
     padding-inline:1rem;
     padding-bottom: 2.5rem;
@@ -714,7 +712,6 @@ body {
 }
 
 .grid-container--crew > .grid-title {
-    border:1px solid yellow;
     grid-area:title;
 }
 
@@ -750,7 +747,7 @@ body {
     grid-area: image;
 }
 
-.technology-info >.number-indicators {
+.number-indicators {
     grid-area: tabs;
     display: flex;
     justify-content: center;
@@ -772,12 +769,10 @@ body {
 }
 
 .technology-info[aria-hidden='false']{
-    border: 2px solid pink;
 }
 
 .technology-info[aria-hidden='true']{
     display: none;
-    border: 2px solid pink;
 }
 
 @media (min-width:35em) { /*Tablet layout*/
@@ -907,7 +902,7 @@ body {
         display:flex;
     }
 
-    .technology-info >.number-indicators{
+    .number-indicators{
         display: grid;
         margin: 0 auto;
         justify-self: center;
@@ -926,11 +921,11 @@ body {
         --flow-space:2rem;
         justify-items: center;
         align-items: center;
-        grid-template-columns: minmax(1rem, 1fr) minmax(0,37rem) minmax(0,25rem) minmax(0, 1rem);
+        grid-template-columns: minmax(1rem, 1fr) minmax(0,3.5rem) minmax(0,37rem) minmax(0,25rem) minmax(0, 1rem);
         column-gap: var(--container-gap, 1.5rem);
         grid-template-areas: 
             ". title title ."
-            ". content image ."
+            ". tabs content image"
         ;
         margin-bottom: 4rem;
     }
