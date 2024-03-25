@@ -1,6 +1,8 @@
 const dotlist = document.querySelector('[role="dotList"]')
 const dots = document.querySelectorAll('[role="dot"]')
 
+console.log('reload')
+
 const keydownLeft = 37;
 const keydownRight = 39;
 

@@ -39,6 +39,12 @@
   <main id="main" class="grid-container grid-container--technology flow">
     
     <h1 class="numbered-title inline-start-flow"><span>03</span>Space launch 101</h1>
+
+    <div class="number-indicators flex" role='numberList' aria-label="number list for each page">
+      <button role="number" numberindex="0" data-image="vehicle_img" aria-controls="vehicle" aria-selected="true">1</button>
+      <button role="number" numberindex="-1" data-image="spaceport_img" aria-controls="spaceport" aria-selected="false">2</button>
+      <button role="number" numberindex="-1" data-image="capsule_img" aria-controls="capsule" aria-selected="false">3</button>
+    </div>
     
     <!-- Vehicle -->
     <div class="tech_img" id="vehicle_img" role="num_img">
@@ -69,12 +75,6 @@
     
     <!-- Vehicle Panel -->
     <article class="technology-info flow" id="vehicle" role="num_panel" number-index="0" aria-hidden="false">
-      
-        <div class="number-indicators flex" role='numberList' aria-label="number list for each page">
-          <button role="number" numberindex="0" data-image="vehicle_img" aria-controls="vehicle" aria-selected="true">1</button>
-          <button role="number" numberindex="-1" data-image="spaceport_img" aria-controls="spaceport" aria-selected="false">2</button>
-          <button role="number" numberindex="-1" data-image="capsule_img" aria-controls="capsule" aria-selected="false">3</button>
-        </div>
         
         <div class="fit-container flow">
           
@@ -94,12 +94,6 @@
 
     <!-- Spaceport Panel -->
     <article class="technology-info flow" id="spaceport" role="num_panel" number-index="0" aria-hidden="true">
-
-          <div class="number-indicators flex">
-            <button role="number" numberindex="-1" data-image="vehicle_img" aria-controls="vehicle" aria-selected="false">1</button>
-            <button role="number" numberindex="0" data-image="spaceport_img" aria-controls="spaceport" aria-selected="true">2</button>
-            <button role="number" numberindex="-1" data-image="capsule_img" aria-controls="capsule" aria-selected="false">3</button>
-          </div>
     
           <div class="fit-container flow">
             
@@ -121,12 +115,6 @@
     <!-- Capsule Panel -->
     <article class="technology-info flow" id="capsule" role="num_panel" number-index="0" aria-hidden="true">
 
-      <div class="number-indicators flex">
-        <button role="number" numberindex="-1" data-image="vehicle_img" aria-controls="vehicle" aria-selected="false">1</button>
-        <button role="number" numberindex="-1" data-image="spaceport_img" aria-controls="spaceport" aria-selected="false">2</button>
-        <button role="number" numberindex="0" data-image="capsule_img" aria-controls="capsule" aria-selected="true">3</button>
-      </div>
-
       <div class="fit-container flow">
         <header class="flow ff-serif flow--space-small">
           <h2 class="fs-200 uppercase text-accent">The terminology...</h2>
@@ -146,9 +134,3 @@
   </main>
 </body>
 </html>
-
-<!-- Tomorrow me -> 
-  I need you to go over the intrinsic sizing in the css 
-  (Font sizes) compare it to the guys code to see what could be the issue
-  The sizes are not correct I think. Should help with my layout... I hope
--->
