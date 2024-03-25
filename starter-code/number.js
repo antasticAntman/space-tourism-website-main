@@ -33,6 +33,9 @@ numbers.forEach((num) => {
 
         parentContainer.querySelector(`#${selectedImg}`).removeAttribute('hidden')
         parentContainer.querySelector(`#${selectedPanel}`).setAttribute('aria-hidden', false)
+
+        ArticleContainer.querySelector('[aria-selected="true"]').setAttribute('aria-selected',false)
+        ArticleContainer.querySelector(`[aria-controls=${selectedPanel}]`).setAttribute('aria-selected', true)
     })
 })
 
