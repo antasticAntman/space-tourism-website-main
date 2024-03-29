@@ -735,7 +735,11 @@ body {
     "tabs"
     "content"
     ;
-    padding-bottom: 10rem;
+    margin-bottom:3rem;
+}
+
+.tech_img {
+    border:1px solid #ffff00;
 }
 
 .grid-container--technology > .numbered-title {
@@ -745,6 +749,8 @@ body {
 
 .grid-container--technology >.tech_img {
     grid-area: image;
+    margin-top:2rem;
+    margin-bottom:2rem;
 }
 
 .number-indicators {
