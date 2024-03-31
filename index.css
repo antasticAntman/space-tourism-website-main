@@ -738,9 +738,6 @@ body {
     margin-bottom:3rem;
 }
 
-.tech_img {
-    border:1px solid #ffff00;
-}
 
 .grid-container--technology > .numbered-title {
     grid-area: title;
