@@ -28,7 +28,7 @@
 
      I used rem for accessibility reasons. 
      If I were to use pixels, 
-     I could potentially alter user settings put into place like if the user has a bigger font size for there vison. 
+     It could potentially alter user settings put into place like if the user has a bigger font size for there vison. 
      We want to respect they're changes so use rem for font size!
     */
 
