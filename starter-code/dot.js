@@ -17,14 +17,11 @@ dotlist.addEventListener('keydown', changeDotFocus)
 dots.forEach((dot)=>{
     dot.addEventListener('click', (e) => {
         const selectedDot = e.target
-        // console.log('selected dot', selectedDot)
         const selectedPanel = selectedDot.getAttribute('aria-controls')
-        // console.log('selected info', selectedPanel)
         const selectedImg = selectedDot.getAttribute('data-image')
-        // console.log('selected image', selectedImg)
+        
         const dotContainer = dot.parentNode
         const mainContainer = dotContainer.parentNode
-        // console.log('container', mainContainer)
 
         // I want to change the info to the selected page
         hideSection(mainContainer, '[role="dotpanel"]')
