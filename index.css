@@ -494,9 +494,6 @@ select {
     background-color:hsl(var(--clr-white) )
 }
 
-.number-indicators {
-/* margin:1rem; */
-}
 
 .number-indicators {
     display: grid;
@@ -517,7 +514,6 @@ select {
     color:hsl(var(--clr-white) );
     outline: 0;
     border:2px solid hsl(var(--clr-light)/.25);
-    /* outline:hsl(var(--clr-light)) */
 }
 
 .number-indicators > .active,
@@ -936,7 +932,6 @@ body {
         grid-column: span 2;
         justify-self: end;
         aspect-ratio: 1;
-        /* max-height: 95%;  */
         max-width: 90%;
     }
     
@@ -956,8 +951,3 @@ body {
     }
 
 }
-
-
-/* [role="tab"]:focus {
-    color:limegreen
-} */
