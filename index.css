@@ -168,10 +168,6 @@ select {
     display:block;
 }
 
-.fluff {
-    /* padding-inline:1rem; */
-}
-
 .flow > *:where(:not(:first-child)){  
     /* ^^ Looking for adjecient siblings that come before it 
     selector examples: 
